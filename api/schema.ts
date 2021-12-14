@@ -1,5 +1,5 @@
-import { GraphQLResolveInfo } from "graphql";
-import { Neo4jContext, neo4jgraphql, RequestArguments } from "neo4j-graphql-js";
+// import { GraphQLResolveInfo } from "graphql";
+// import { Neo4jContext, neo4jgraphql, RequestArguments } from "neo4j-graphql-js";
 
 export const typeDefs = `
   type User {
