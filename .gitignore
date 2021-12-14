@@ -46,4 +46,5 @@ app.*.map.json
 /android/app/release
 
 api/node_modules/
-neo4j/data/databases/graph.db/
+neo4j/
+!neo4j/Dockerfile

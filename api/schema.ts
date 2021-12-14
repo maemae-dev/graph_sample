@@ -8,13 +8,13 @@ export const typeDefs = `
   }
 
   type Query {
-    user: User!
+    User(_id: ID, name: String): [User]
   }
 `;
 
 export const resolvers = {
   Query: {
-    user(
+    User(
       obj: any,
       args: RequestArguments,
       ctx: Neo4jContext<Record<string, any>>,
