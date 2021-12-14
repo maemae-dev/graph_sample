@@ -5,22 +5,11 @@ export const typeDefs = `
   type User {
     _id: ID
     name: String!
+    works: [Company] @relation(name: "WORKS", direction: OUT)
   }
 
-  type Query {
-    User(_id: ID, name: String): [User]
+  type Company {
+    name: String!
+    employee: [User] @relation(name: "WORKS", direction: IN)
   }
 `;
-
-export const resolvers = {
-  Query: {
-    User(
-      obj: any,
-      args: RequestArguments,
-      ctx: Neo4jContext<Record<string, any>>,
-      info: GraphQLResolveInfo
-    ) {
-      return neo4jgraphql(obj, args, ctx, info);
-    },
-  },
-};

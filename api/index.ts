@@ -3,7 +3,7 @@ import { ApolloServer } from "apollo-server-express";
 import express from "express";
 import cors from "cors";
 import * as neo4j from "neo4j-driver";
-import { typeDefs, resolvers } from "./schema";
+import { typeDefs } from "./schema";
 
 (async () => {
   // スキーマの作成
@@ -12,7 +12,7 @@ import { typeDefs, resolvers } from "./schema";
     typeDefs,
     config: {
       query: true,
-      mutation: false,
+      mutation: true,
     },
   });
 
@@ -31,26 +31,14 @@ import { typeDefs, resolvers } from "./schema";
   app.use(express.json());
   app.use(cors());
 
-  // const playgroundEndpoint = "/graphql";
-
-  // Apolloサーバーの作成
-  // playgroundは試しにクエリを流せるエディタ、後で使用する
   const server = new ApolloServer({
     schema,
-    resolvers,
-    context: ({ req }) => {
-      return {
-        driver,
-        req,
-      };
-    },
+    // resolvers,
+    context: ({ req }) => ({
+      driver,
+      req,
+    }),
     introspection: true,
-    // playground: {
-    //   endpoint: playgroundEndpoint,
-    //   settings: {
-    //     "editor.theme": "light",
-    //   },
-    // },
   });
   await server.start();
 
