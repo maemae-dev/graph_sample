@@ -13,6 +13,16 @@ import 'package:graph_sample/graphql/add_user_works.req.gql.dart'
     show GAddUserWorksReq;
 import 'package:graph_sample/graphql/add_user_works.var.gql.dart'
     show GAddUserWorksVars;
+import 'package:graph_sample/graphql/all_companies.data.gql.dart'
+    show GAllCompaniesData, GAllCompaniesData_Company;
+import 'package:graph_sample/graphql/all_companies.req.gql.dart'
+    show GAllCompaniesReq;
+import 'package:graph_sample/graphql/all_companies.var.gql.dart'
+    show GAllCompaniesVars;
+import 'package:graph_sample/graphql/all_users.data.gql.dart'
+    show GAllUsersData, GAllUsersData_User;
+import 'package:graph_sample/graphql/all_users.req.gql.dart' show GAllUsersReq;
+import 'package:graph_sample/graphql/all_users.var.gql.dart' show GAllUsersVars;
 import 'package:graph_sample/graphql/company_employee.data.gql.dart'
     show
         GCompanyEmployeeData,
@@ -63,6 +73,14 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GAddUserWorksData_AddUserWorks_to,
   GAddUserWorksReq,
   GAddUserWorksVars,
+  GAllCompaniesData,
+  GAllCompaniesData_Company,
+  GAllCompaniesReq,
+  GAllCompaniesVars,
+  GAllUsersData,
+  GAllUsersData_User,
+  GAllUsersReq,
+  GAllUsersVars,
   GCompanyEmployeeData,
   GCompanyEmployeeData_Company,
   GCompanyEmployeeData_Company_employee,
