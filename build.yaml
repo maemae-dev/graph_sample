@@ -17,7 +17,6 @@ targets:
         enabled: true
         options:
           schema: graph_sample|lib/graphql/schema.graphql
-
       ferry_generator|req_builder:
         enabled: true
         options:

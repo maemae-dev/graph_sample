@@ -7,6 +7,25 @@ part of 'serializers.gql.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
+      ..add(GAddUserWorksData.serializer)
+      ..add(GAddUserWorksData_AddUserWorks.serializer)
+      ..add(GAddUserWorksData_AddUserWorks_from.serializer)
+      ..add(GAddUserWorksData_AddUserWorks_to.serializer)
+      ..add(GAddUserWorksReq.serializer)
+      ..add(GAddUserWorksVars.serializer)
+      ..add(GCompanyEmployeeData.serializer)
+      ..add(GCompanyEmployeeData_Company.serializer)
+      ..add(GCompanyEmployeeData_Company_employee.serializer)
+      ..add(GCompanyEmployeeReq.serializer)
+      ..add(GCompanyEmployeeVars.serializer)
+      ..add(GCreateCompanyData.serializer)
+      ..add(GCreateCompanyData_CreateCompany.serializer)
+      ..add(GCreateCompanyReq.serializer)
+      ..add(GCreateCompanyVars.serializer)
+      ..add(GCreateUserData.serializer)
+      ..add(GCreateUserData_CreateUser.serializer)
+      ..add(GCreateUserReq.serializer)
+      ..add(GCreateUserVars.serializer)
       ..add(G_CompanyFilter.serializer)
       ..add(G_CompanyInput.serializer)
       ..add(G_CompanyOrdering.serializer)
@@ -21,6 +40,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(G_UserFilter.serializer)
       ..add(G_UserInput.serializer)
       ..add(G_UserOrdering.serializer)
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GCompanyEmployeeData_Company)]),
+          () => new ListBuilder<GCompanyEmployeeData_Company>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GCompanyEmployeeData_Company_employee)]),
+          () => new ListBuilder<GCompanyEmployeeData_Company_employee>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(G_CompanyFilter)]),
           () => new ListBuilder<G_CompanyFilter>())

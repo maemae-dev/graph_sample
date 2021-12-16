@@ -1,0 +1,10 @@
+mutation AddUserWorks($from: _UserInput!, $to: _CompanyInput!) {
+  AddUserWorks(from: $from, to: $to) {
+    from {
+      name
+    }
+    to {
+      name
+    }
+  }
+}
