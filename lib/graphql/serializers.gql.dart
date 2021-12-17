@@ -32,6 +32,16 @@ import 'package:graph_sample/graphql/company_employee.req.gql.dart'
     show GCompanyEmployeeReq;
 import 'package:graph_sample/graphql/company_employee.var.gql.dart'
     show GCompanyEmployeeVars;
+import 'package:graph_sample/graphql/company_employee_works.data.gql.dart'
+    show
+        GCompanyEmployeeWorksData,
+        GCompanyEmployeeWorksData_Company,
+        GCompanyEmployeeWorksData_Company_employee,
+        GCompanyEmployeeWorksData_Company_employee_works;
+import 'package:graph_sample/graphql/company_employee_works.req.gql.dart'
+    show GCompanyEmployeeWorksReq;
+import 'package:graph_sample/graphql/company_employee_works.var.gql.dart'
+    show GCompanyEmployeeWorksVars;
 import 'package:graph_sample/graphql/create_company.data.gql.dart'
     show GCreateCompanyData, GCreateCompanyData_CreateCompany;
 import 'package:graph_sample/graphql/create_company.req.gql.dart'
@@ -86,6 +96,12 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GCompanyEmployeeData_Company_employee,
   GCompanyEmployeeReq,
   GCompanyEmployeeVars,
+  GCompanyEmployeeWorksData,
+  GCompanyEmployeeWorksData_Company,
+  GCompanyEmployeeWorksData_Company_employee,
+  GCompanyEmployeeWorksData_Company_employee_works,
+  GCompanyEmployeeWorksReq,
+  GCompanyEmployeeWorksVars,
   GCreateCompanyData,
   GCreateCompanyData_CreateCompany,
   GCreateCompanyReq,

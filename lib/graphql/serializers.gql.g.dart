@@ -26,6 +26,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GCompanyEmployeeData_Company_employee.serializer)
       ..add(GCompanyEmployeeReq.serializer)
       ..add(GCompanyEmployeeVars.serializer)
+      ..add(GCompanyEmployeeWorksData.serializer)
+      ..add(GCompanyEmployeeWorksData_Company.serializer)
+      ..add(GCompanyEmployeeWorksData_Company_employee.serializer)
+      ..add(GCompanyEmployeeWorksData_Company_employee_works.serializer)
+      ..add(GCompanyEmployeeWorksReq.serializer)
+      ..add(GCompanyEmployeeWorksVars.serializer)
       ..add(GCreateCompanyData.serializer)
       ..add(GCreateCompanyData_CreateCompany.serializer)
       ..add(GCreateCompanyReq.serializer)
@@ -63,6 +69,21 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList,
               const [const FullType(GCompanyEmployeeData_Company_employee)]),
           () => new ListBuilder<GCompanyEmployeeData_Company_employee>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GCompanyEmployeeWorksData_Company)]),
+          () => new ListBuilder<GCompanyEmployeeWorksData_Company>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GCompanyEmployeeWorksData_Company_employee)
+          ]),
+          () => new ListBuilder<GCompanyEmployeeWorksData_Company_employee>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GCompanyEmployeeWorksData_Company_employee_works)
+          ]),
+          () => new ListBuilder<
+              GCompanyEmployeeWorksData_Company_employee_works>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(G_CompanyFilter)]),
           () => new ListBuilder<G_CompanyFilter>())

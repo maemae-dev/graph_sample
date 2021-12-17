@@ -1,0 +1,11 @@
+query CompanyEmployeeWorks($name: String) {
+  Company(name: $name) {
+    name
+    employee {
+      name
+      works {
+        name
+      }
+    }
+  }
+}
